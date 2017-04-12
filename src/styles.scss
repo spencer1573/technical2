@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+$blue-primary-0: #2E4272;
+$blue-primary-1: #6B7B9F;
+$blue-primary-2: #4A5D89;
+$blue-primary-3: #182D5B;
+$blue-primary-4: #091B44;
+$enable-rounded: false;
+
+.navbar-light {
+  background-color: $blue-primary-1;
+}
+
+.navbar-inverse {
+  background-color: $blue-primary-4;
+}

@@ -1,0 +1,28 @@
+<div style="padding: 50px">
+  <h3>Simple Reactive Form</h3>
+  <div style="padding-top: 30px">
+  </div>
+  <p>type more than 5 characters</p>
+  <p>and less than 10</p>
+  <!--<form [formGroup]="theForm" novalidate>-->
+  <div style="padding-top: 5px">
+  </div>
+  <form [formGroup]="theForm">
+    <div class="form-group">
+      <label class="center-block">name:
+        <input class="form-control name" id="name" formControlName="name">
+      </label>
+    </div>
+  </form>
+  <div style="padding-top: 5px">
+  </div>
+  <p>name value: {{ theForm.get('name').value | json }}</p>
+  <div *ngIf="theForm.get('name').hasError('minlength')" class="alert alert-danger">
+    <p>name needs to be more than 5 characters</p>
+  </div>
+  <div *ngIf="theForm.get('name').hasError('maxlength')" class="alert alert-danger">
+    <p>name needs to be less than 10 characters</p>
+  </div>
+  <!--<p>Object methods: {{ Object.getOwnPropertyNames(theForm) | json }}</p>-->
+
+</div>
